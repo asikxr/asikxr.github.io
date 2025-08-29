@@ -10,14 +10,14 @@
     body { font-family: 'Poppins', sans-serif; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="flex flex-col min-h-screen bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
   <nav class="text-white" style="background-color: #0c1c34;">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#inicio">
-  <img src="img/logo.png" alt="logo" class="h-12">
-</a>
+        <img src="img/logo.png" alt="logo" class="h-12">
+      </a>
       <div class="space-x-6 hidden md:flex">
         <a href="#inicio" class="hover:text-teal-600 font-medium">Inicio</a>
         <a href="#ecosistemas" class="hover:text-teal-600 font-medium">Ecosistemas</a>
@@ -26,251 +26,223 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="inicio" class="text-white min-h-screen flex items-center justify-center text-center px-6 relative"
-         style="background: url('img/fondo_inicio.png') no-repeat center center; background-size: cover;">
-  <!-- Overlay opcional -->
-  <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-  
-  <!-- Contenido -->
-  <div class="relative z-10 flex flex-col items-center gap-4">
-    <h1 class="text-5xl md:text-6xl font-bold mb-6">EVOS</h1>
-    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-      Una forma divertida de entender a los ecosistemas, qué factores los afectan y la increíble diversidad de animales que los habitan.
-    </p>
-    
-    <!-- Botón Explorar -->
-    <a href="#ecosistemas" class="bg-white text-teal-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">
-      Explorar
-    </a>
+  <!-- Main Content -->
+  <main class="flex-grow">
 
-    <!-- Botón Descargar -->
-    <a href="archivos/mi_archivo.pdf" download
-       class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">
-      Descargar
-    </a>
-  </div>
-</section>
+    <!-- Hero Section -->
+    <section id="inicio" class="text-white min-h-screen flex items-center justify-center text-center px-6 relative"
+             style="background: url('img/fondo_inicio.png') no-repeat center center; background-size: cover;">
+      <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+      <div class="relative z-10 flex flex-col items-center gap-4">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">EVOS</h1>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+          Una forma divertida de entender a los ecosistemas, qué factores los afectan y la increíble diversidad de animales que los habitan.
+        </p>
+        <a href="#ecosistemas" class="bg-white text-teal-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">Explorar</a>
+        <a href="archivos/mi_archivo.pdf" download class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">Descargar</a>
+      </div>
+    </section>
 
-
-
-
-  <!-- Ecosistemas -->
-  <section id="ecosistemas" class="max-w-6xl mx-auto py-20 px-6">
-    <h2 class="text-4xl font-bold text-center text-teal-700 mb-12">🌍 Ecosistemas</h2>
-    
-    <!-- Introducción -->
-    <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
-      <h3 class="text-2xl font-semibold mb-4">¿Qué es un ecosistema?</h3>
-      <p class="text-gray-600 leading-relaxed">
-        Un ecosistema es una comunidad de organismos que interactúan entre sí y con el entorno físico 
-        que los rodea (suelo, agua, aire, clima). Estos sistemas mantienen el equilibrio natural del planeta 
-        y permiten la vida.
-      </p>
-    </div>
-
-    <!-- Funcionamiento y factores -->
-    <div class="grid md:grid-cols-2 gap-8 mb-12">
-      <div class="bg-white rounded-2xl shadow-lg p-8">
-        <h3 class="text-2xl font-semibold mb-4">¿Cómo funcionan?</h3>
+    <!-- Ecosistemas -->
+    <section id="ecosistemas" class="max-w-6xl mx-auto py-20 px-6">
+      <h2 class="text-4xl font-bold text-center text-teal-700 mb-12">🌍 Ecosistemas</h2>
+      
+      <!-- Introducción -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+        <h3 class="text-2xl font-semibold mb-4">¿Qué es un ecosistema?</h3>
         <p class="text-gray-600 leading-relaxed">
-          Los ecosistemas funcionan mediante cadenas alimenticias y ciclos biogeoquímicos 
-          (agua, carbono, nitrógeno). La energía fluye desde el sol hacia las plantas y de ahí 
-          a los animales, manteniendo un equilibrio dinámico.
+          Un ecosistema es una comunidad de organismos que interactúan entre sí y con el entorno físico 
+          que los rodea (suelo, agua, aire, clima). Estos sistemas mantienen el equilibrio natural del planeta 
+          y permiten la vida.
         </p>
       </div>
-      <div class="bg-white rounded-2xl shadow-lg p-8">
-        <h3 class="text-2xl font-semibold mb-4">Factores que los afectan</h3>
-        <ul class="list-disc list-inside text-gray-600 leading-relaxed">
-          <li>🌡️ Cambio climático</li>
-          <li>🌳 Deforestación</li>
-          <li>💧 Contaminación del agua y aire</li>
-          <li>🏗️ Urbanización y actividad humana</li>
-        </ul>
-      </div>
-    </div>
 
-    <!-- Tipos de Ecosistemas -->
-<section id="ecosistemas" class="bg-gray-100 py-20 px-6">
-  <h3 class="text-3xl font-semibold text-center text-teal-700 mb-8">Tipos de Ecosistemas</h3>
-  
-  <div id="ecosistemaGrid" class="grid md:grid-cols-3 gap-8">
-    <!-- Ecosistemas visibles por defecto -->
-    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-      <img src="img/selva.jpg" alt="Selva" class="w-full h-40 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Selva</h4>
-        <p class="text-gray-600">Alta biodiversidad, clima húmedo y lluvias frecuentes.</p>
-      </div>
-    </div>
-    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-      <img src="img/desierto.jpg" alt="Desierto" class="w-full h-40 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Desierto</h4>
-        <p class="text-gray-600">Clima árido, poca agua y especies adaptadas a la sequía.</p>
-      </div>
-    </div>
-    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-      <img src="img/oceano.jpg" alt="Océano" class="w-full h-40 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Océano</h4>
-        <p class="text-gray-600">Cubre el 70% de la Tierra y alberga millones de especies marinas.</p>
-      </div>
-    </div>
-
-    <!-- Ecosistemas adicionales (ocultos por defecto) -->
-    <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
-      <img src="img/pradera.jpg" alt="Pradera" class="w-full h-40 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Pradera</h4>
-        <p class="text-gray-600">Grandes extensiones de pastizales, clima templado y fauna adaptada.</p>
-      </div>
-    </div>
-    <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
-      <img src="img/bosque.jpg" alt="Bosque" class="w-full h-40 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Bosque</h4>
-        <p class="text-gray-600">Climas variados, árboles densos y gran diversidad de especies.</p>
-      </div>
-    </div>
-    <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
-      <img src="img/montana.jpg" alt="Montaña" class="w-full h-40 object-cover">
-      <div class="p-6">
-        <h4 class="text-xl font-semibold mb-2">Montaña</h4>
-        <p class="text-gray-600">Zonas elevadas con climas fríos y fauna especializada.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Botón Ver más -->
-  <div class="text-center mt-8">
-    <button id="verMasEcosBtn" class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">
-      Ver más
-    </button>
-  </div>
-
-  <!-- Script para toggle Ver más / Ver menos -->
-  <script>
-    (function() {
-      const verMasEcosBtn = document.getElementById('verMasEcosBtn');
-
-      verMasEcosBtn.addEventListener('click', () => {
-        // Selecciona los ecosistemas adicionales (del 4º en adelante)
-        const extraEcos = document.querySelectorAll('#ecosistemaGrid > div:nth-child(n+4)');
-
-        extraEcos.forEach(ecos => ecos.classList.toggle('hidden'));
-
-        const anyHidden = Array.from(extraEcos).some(ecos => ecos.classList.contains('hidden'));
-        verMasEcosBtn.textContent = anyHidden ? "Ver más" : "Ver menos";
-      });
-    })();
-  </script>
-</section>
-
-  <!-- Animales -->
-<section id="animales" class="bg-gray-100 py-20 px-6">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-4xl font-bold text-center text-teal-700 mb-12">🐾 Animales</h2>
-    
-    <!-- Grid de animales -->
-    <div id="animalGrid" class="grid md:grid-cols-3 gap-8">
-      <!-- Animales visibles por defecto -->
-      <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
-        <img src="img/tigre.jpg" alt="Tigre" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-2xl font-semibold mb-2">Tigre de Bengala</h3>
-          <p class="text-gray-600 mb-2">🌍 Selvas de India y Bangladesh</p>
-          <p class="text-gray-600">🍖 Carnívoro</p>
+      <!-- Funcionamiento y factores -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white rounded-2xl shadow-lg p-8">
+          <h3 class="text-2xl font-semibold mb-4">¿Cómo funcionan?</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Los ecosistemas funcionan mediante cadenas alimenticias y ciclos biogeoquímicos 
+            (agua, carbono, nitrógeno). La energía fluye desde el sol hacia las plantas y de ahí 
+            a los animales, manteniendo un equilibrio dinámico.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-8">
+          <h3 class="text-2xl font-semibold mb-4">Factores que los afectan</h3>
+          <ul class="list-disc list-inside text-gray-600 leading-relaxed">
+            <li>🌡️ Cambio climático</li>
+            <li>🌳 Deforestación</li>
+            <li>💧 Contaminación del agua y aire</li>
+            <li>🏗️ Urbanización y actividad humana</li>
+          </ul>
         </div>
       </div>
-      <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
-        <img src="img/delfin.jpg" alt="Delfín" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-2xl font-semibold mb-2">Delfín</h3>
-          <p class="text-gray-600 mb-2">🌍 Océanos y mares cálidos</p>
-          <p class="text-gray-600">🐟 Se alimenta de peces pequeños</p>
+
+      <!-- Tipos de Ecosistemas -->
+      <section class="bg-gray-100 py-20 px-6">
+        <h3 class="text-3xl font-semibold text-center text-teal-700 mb-8">Tipos de Ecosistemas</h3>
+        <div id="ecosistemaGrid" class="grid md:grid-cols-3 gap-8">
+          <!-- Ecosistemas visibles -->
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="img/selva.jpg" alt="Selva" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h4 class="text-xl font-semibold mb-2">Selva</h4>
+              <p class="text-gray-600">Alta biodiversidad, clima húmedo y lluvias frecuentes.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="img/desierto.jpg" alt="Desierto" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h4 class="text-xl font-semibold mb-2">Desierto</h4>
+              <p class="text-gray-600">Clima árido, poca agua y especies adaptadas a la sequía.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="img/oceano.jpg" alt="Océano" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h4 class="text-xl font-semibold mb-2">Océano</h4>
+              <p class="text-gray-600">Cubre el 70% de la Tierra y alberga millones de especies marinas.</p>
+            </div>
+          </div>
+
+          <!-- Ecosistemas ocultos -->
+          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="img/pradera.jpg" alt="Pradera" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h4 class="text-xl font-semibold mb-2">Pradera</h4>
+              <p class="text-gray-600">Grandes extensiones de pastizales, clima templado y fauna adaptada.</p>
+            </div>
+          </div>
+          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="img/bosque.jpg" alt="Bosque" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h4 class="text-xl font-semibold mb-2">Bosque</h4>
+              <p class="text-gray-600">Climas variados, árboles densos y gran diversidad de especies.</p>
+            </div>
+          </div>
+          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="img/montana.jpg" alt="Montaña" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h4 class="text-xl font-semibold mb-2">Montaña</h4>
+              <p class="text-gray-600">Zonas elevadas con climas fríos y fauna especializada.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <button id="verMasEcosBtn" class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">
+            Ver más
+          </button>
+        </div>
+
+        <script>
+          (function() {
+            const verMasEcosBtn = document.getElementById('verMasEcosBtn');
+            verMasEcosBtn.addEventListener('click', () => {
+              const extraEcos = document.querySelectorAll('#ecosistemaGrid > div:nth-child(n+4)');
+              extraEcos.forEach(ecos => ecos.classList.toggle('hidden'));
+              const anyHidden = Array.from(extraEcos).some(ecos => ecos.classList.contains('hidden'));
+              verMasEcosBtn.textContent = anyHidden ? "Ver más" : "Ver menos";
+            });
+          })();
+        </script>
+      </section>
+    </section>
+
+    <!-- Animales -->
+    <section id="animales" class="bg-gray-100 py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-teal-700 mb-12">🐾 Animales</h2>
+        <!-- Grid de animales -->
+        <div id="animalGrid" class="grid md:grid-cols-3 gap-8">
+          <!-- Animales visibles -->
+          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="img/caballo.gif" alt="Tigre" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-2">Tigre de Bengala</h3>
+              <p class="text-gray-600 mb-2">🌍 Selvas de India y Bangladesh</p>
+              <p class="text-gray-600">🍖 Carnívoro</p>
+            </div>
+          </div>
+          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="img/delfin.jpg" alt="Delfín" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-2">Delfín</h3>
+              <p class="text-gray-600 mb-2">🌍 Océanos y mares cálidos</p>
+              <p class="text-gray-600">🐟 Se alimenta de peces pequeños</p>
+            </div>
+          </div>
+          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="img/elefante.jpg" alt="Elefante" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-2">Elefante Africano</h3>
+              <p class="text-gray-600 mb-2">🌍 Sabana africana</p>
+              <p class="text-gray-600">🌱 Herbívoro</p>
+            </div>
+          </div>
+
+          <!-- Animales ocultos -->
+          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="img/lobo.jpg" alt="Lobo" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-2">Lobo Gris</h3>
+              <p class="text-gray-600 mb-2">🌍 Bosques de América del Norte</p>
+              <p class="text-gray-600">🍖 Carnívoro</p>
+            </div>
+          </div>
+          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="img/oso.jpg" alt="Oso" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-2">Oso Pardo</h3>
+              <p class="text-gray-600 mb-2">🌍 Bosques y montañas</p>
+              <p class="text-gray-600">🍖 Omnívoro</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <button id="verMasBtn" class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">
+            Ver más
+          </button>
+        </div>
+
+        <script>
+          const verMasBtn = document.getElementById('verMasBtn');
+          verMasBtn.addEventListener('click', () => {
+            const extraAnimals = document.querySelectorAll('#animalGrid .animal-card:nth-child(n+4)');
+            extraAnimals.forEach(animal => animal.classList.toggle('hidden'));
+            const anyHidden = Array.from(extraAnimals).some(animal => animal.classList.contains('hidden'));
+            verMasBtn.textContent = anyHidden ? "Ver más" : "Ver menos";
+          });
+        </script>
+      </div>
+    </section>
+
+    <!-- Explicación -->
+    <section id="explicacion" class="py-20 bg-gray-100 text-center">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-teal-600 mb-6">Explicación del Proyecto</h2>
+        <p class="text-lg mb-8 text-gray-700">
+          En este video te explicamos cómo funciona nuestro proyecto.
+        </p>
+        <div class="relative w-full overflow-hidden rounded-2xl shadow-lg" style="padding-top: 56.25%;">
+          <iframe 
+            class="absolute top-0 left-0 w-full h-full rounded-2xl"
+            src="https://www.youtube.com/embed/HDc7R9LlcjQ?si=vVUPigrP0K8mTOvE" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
-      <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
-        <img src="img/elefante.jpg" alt="Elefante" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-2xl font-semibold mb-2">Elefante Africano</h3>
-          <p class="text-gray-600 mb-2">🌍 Sabana africana</p>
-          <p class="text-gray-600">🌱 Herbívoro</p>
-        </div>
-      </div>
-      
-      <!-- Animales adicionales (ocultos por defecto) -->
-      <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden">
-        <img src="img/lobo.jpg" alt="Lobo" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-2xl font-semibold mb-2">Lobo Gris</h3>
-          <p class="text-gray-600 mb-2">🌍 Bosques de América del Norte</p>
-          <p class="text-gray-600">🍖 Carnívoro</p>
-        </div>
-      </div>
-      <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden">
-        <img src="img/oso.jpg" alt="Oso" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-2xl font-semibold mb-2">Oso Pardo</h3>
-          <p class="text-gray-600 mb-2">🌍 Bosques y montañas</p>
-          <p class="text-gray-600">🍖 Omnívoro</p>
-        </div>
-      </div>
-      <!-- Puedes agregar más animales siguiendo el mismo patrón -->
-    </div>
+    </section>
 
-    <!-- Botón Ver más -->
-    <div class="text-center mt-8">
-      <button id="verMasBtn" class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">
-        Ver más
-      </button>
-    </div>
-  </div>
-
-  <script>
-    let verMasBtn = document.getElementById('verMasBtn');
-
-    verMasBtn.addEventListener('click', () => {
-      // Selecciona todos los animales adicionales (del 4º en adelante)
-      const extraAnimals = document.querySelectorAll('#animalGrid .animal-card:nth-child(n+4)');
-
-      // Alterna la clase hidden
-      extraAnimals.forEach(animal => animal.classList.toggle('hidden'));
-
-      // Si alguno sigue oculto, el botón dice "Ver más", si no, "Ver menos"
-      const anyHidden = Array.from(extraAnimals).some(animal => animal.classList.contains('hidden'));
-      verMasBtn.textContent = anyHidden ? "Ver más" : "Ver menos";
-    });
-  </script>
-</section>
-
-<section id="explicacion" class="py-20 bg-gray-100 text-center">
-  <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-4xl font-bold text-teal-600 mb-6">Explicación del Proyecto</h2>
-    <p class="text-lg mb-8 text-gray-700">
-      En este video te explicamos cómo funciona nuestro proyecto.
-    </p>
-
-    <!-- Contenedor responsivo del video -->
-    <div class="relative w-full overflow-hidden rounded-2xl shadow-lg" style="padding-top: 56.25%;">
-      <iframe 
-        class="absolute top-0 left-0 w-full h-full rounded-2xl"
-        src="https://www.youtube.com/embed/HDc7R9LlcjQ?si=vVUPigrP0K8mTOvE" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</section>
-
-
+  </main>
 
   <!-- Footer -->
- <footer class="text-white py-6 mt-12" style="background-color: #0c1c34;">
+  <footer class="bg-[#0c1c34] text-white text-center py-6 w-full">
     <p>© 2025 EVOS</p>
   </footer>
 
