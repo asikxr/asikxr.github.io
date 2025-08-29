@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Proyecto Animales y Ecosistemas</title>
+  <title>EVOS: Ecosistemas Vida Organizacion y Sustentabilidad</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -15,7 +15,9 @@
   <!-- Navbar -->
   <nav class="bg-white shadow-md fixed w-full z-10">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#inicio" class="text-2xl font-bold text-teal-600">🌿 Mi Proyecto</a>
+      <a href="#inicio">
+  <img src="img/logo.jpg" alt="logo" class="h-12">
+</a>
       <div class="space-x-6 hidden md:flex">
         <a href="#inicio" class="hover:text-teal-600 font-medium">Inicio</a>
         <a href="#ecosistemas" class="hover:text-teal-600 font-medium">Ecosistemas</a>
@@ -25,15 +27,33 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="inicio" class="bg-gradient-to-r from-teal-500 to-green-600 text-white min-h-screen flex items-center justify-center text-center px-6">
-    <div>
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">Proyecto Animales y Ecosistemas</h1>
-      <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-        Una plataforma educativa para conocer cómo funcionan los ecosistemas, qué factores los afectan y la increíble diversidad de animales que los habitan.
-      </p>
-      <a href="#ecosistemas" class="bg-white text-teal-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">Explorar</a>
-    </div>
-  </section>
+  <section id="inicio" class="text-white min-h-screen flex items-center justify-center text-center px-6 relative"
+         style="background: url('img/fondo_inicio.png') no-repeat center center; background-size: cover;">
+  <!-- Overlay opcional -->
+  <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+  
+  <!-- Contenido -->
+  <div class="relative z-10 flex flex-col items-center gap-4">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6">EVOS</h1>
+    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+      Una forma divertida de entender a los ecosistemas, qué factores los afectan y la increíble diversidad de animales que los habitan.
+    </p>
+    
+    <!-- Botón Explorar -->
+    <a href="#ecosistemas" class="bg-white text-teal-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">
+      Explorar
+    </a>
+
+    <!-- Botón Descargar -->
+    <a href="archivos/mi_archivo.pdf" download
+       class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">
+      Descargar
+    </a>
+  </div>
+</section>
+
+
+
 
   <!-- Ecosistemas -->
   <section id="ecosistemas" class="max-w-6xl mx-auto py-20 px-6">
@@ -99,40 +119,80 @@
 
   <!-- Animales -->
   <section id="animales" class="bg-gray-100 py-20 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold text-center text-teal-700 mb-12">🐾 Animales</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <img src="img/tigre.jpg" alt="Tigre" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2">Tigre de Bengala</h3>
-            <p class="text-gray-600 mb-2">🌍 Selvas de India y Bangladesh</p>
-            <p class="text-gray-600">🍖 Carnívoro</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <img src="img/delfin.jpg" alt="Delfín" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2">Delfín</h3>
-            <p class="text-gray-600 mb-2">🌍 Océanos y mares cálidos</p>
-            <p class="text-gray-600">🐟 Se alimenta de peces pequeños</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <img src="img/elefante.jpg" alt="Elefante" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2">Elefante Africano</h3>
-            <p class="text-gray-600 mb-2">🌍 Sabana africana</p>
-            <p class="text-gray-600">🌱 Herbívoro</p>
-          </div>
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center text-teal-700 mb-12">🐾 Animales</h2>
+    
+    <!-- Grid de animales -->
+    <div id="animalGrid" class="grid md:grid-cols-3 gap-8">
+      <!-- Animales visibles por defecto -->
+      <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="img/tigre.jpg" alt="Tigre" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Tigre de Bengala</h3>
+          <p class="text-gray-600 mb-2">🌍 Selvas de India y Bangladesh</p>
+          <p class="text-gray-600">🍖 Carnívoro</p>
         </div>
       </div>
+      <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="img/delfin.jpg" alt="Delfín" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Delfín</h3>
+          <p class="text-gray-600 mb-2">🌍 Océanos y mares cálidos</p>
+          <p class="text-gray-600">🐟 Se alimenta de peces pequeños</p>
+        </div>
+      </div>
+      <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="img/elefante.jpg" alt="Elefante" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Elefante Africano</h3>
+          <p class="text-gray-600 mb-2">🌍 Sabana africana</p>
+          <p class="text-gray-600">🌱 Herbívoro</p>
+        </div>
+      </div>
+      
+      <!-- Animales adicionales (ocultos por defecto) -->
+      <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="img/lobo.jpg" alt="Lobo" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Lobo Gris</h3>
+          <p class="text-gray-600 mb-2">🌍 Bosques de América del Norte</p>
+          <p class="text-gray-600">🍖 Carnívoro</p>
+        </div>
+      </div>
+      <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="img/oso.jpg" alt="Oso" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Oso Pardo</h3>
+          <p class="text-gray-600 mb-2">🌍 Bosques y montañas</p>
+          <p class="text-gray-600">🍖 Omnívoro</p>
+        </div>
+      </div>
+      <!-- Puedes agregar más animales siguiendo el mismo patrón -->
     </div>
-  </section>
+
+    <!-- Botón Ver más -->
+    <div class="text-center mt-8">
+      <button id="verMasBtn" class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">
+        Ver más
+      </button>
+    </div>
+  </div>
+
+  <!-- Script para mostrar más animales -->
+  <script>
+    const verMasBtn = document.getElementById('verMasBtn');
+    verMasBtn.addEventListener('click', () => {
+      const hiddenAnimals = document.querySelectorAll('#animalGrid .hidden');
+      hiddenAnimals.forEach(a => a.classList.remove('hidden'));
+      verMasBtn.style.display = 'none'; // Oculta el botón después de mostrar todos
+    });
+  </script>
+</section>
+
 
   <!-- Footer -->
   <footer class="bg-teal-600 text-white text-center py-6">
-    <p>© 2025 Proyecto Animales y Ecosistemas - Hecho por Adrián</p>
+    <p>© 2025 EVOS</p>
   </footer>
 
 </body>
