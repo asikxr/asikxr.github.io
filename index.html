@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,6 +5,8 @@
   <title>EVOS: Ecosistemas Vida Organizacion y Sustentabilidad</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <style>
     body { font-family: 'Poppins', sans-serif; }
   </style>
@@ -33,7 +34,7 @@
     <section id="inicio" class="text-white min-h-screen flex items-center justify-center text-center px-6 relative"
              style="background: url('img/fondo_inicio.png') no-repeat center center; background-size: cover;">
       <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-      <div class="relative z-10 flex flex-col items-center gap-4">
+      <div class="relative z-10 flex flex-col items-center gap-4" data-aos="fade-up">
         <h1 class="text-5xl md:text-6xl font-bold mb-6">EVOS</h1>
         <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
           Una forma divertida de entender a los ecosistemas, qué factores los afectan y la increíble diversidad de animales que los habitan.
@@ -45,10 +46,10 @@
 
     <!-- Ecosistemas -->
     <section id="ecosistemas" class="max-w-6xl mx-auto py-20 px-6">
-      <h2 class="text-4xl font-bold text-center text-teal-700 mb-12">🌍 Ecosistemas</h2>
+      <h2 class="text-4xl font-bold text-center text-teal-700 mb-12" data-aos="fade-up">🌍 Ecosistemas</h2>
       
       <!-- Introducción -->
-      <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+      <div class="bg-white rounded-2xl shadow-lg p-8 mb-12" data-aos="fade-up">
         <h3 class="text-2xl font-semibold mb-4">¿Qué es un ecosistema?</h3>
         <p class="text-gray-600 leading-relaxed">
           Un ecosistema es una comunidad de organismos que interactúan entre sí y con el entorno físico 
@@ -59,7 +60,7 @@
 
       <!-- Funcionamiento y factores -->
       <div class="grid md:grid-cols-2 gap-8 mb-12">
-        <div class="bg-white rounded-2xl shadow-lg p-8">
+        <div class="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-right">
           <h3 class="text-2xl font-semibold mb-4">¿Cómo funcionan?</h3>
           <p class="text-gray-600 leading-relaxed">
             Los ecosistemas funcionan mediante cadenas alimenticias y ciclos biogeoquímicos 
@@ -67,7 +68,7 @@
             a los animales, manteniendo un equilibrio dinámico.
           </p>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8">
+        <div class="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-left">
           <h3 class="text-2xl font-semibold mb-4">Factores que los afectan</h3>
           <ul class="list-disc list-inside text-gray-600 leading-relaxed">
             <li>🌡️ Cambio climático</li>
@@ -80,24 +81,24 @@
 
       <!-- Tipos de Ecosistemas -->
       <section class="bg-gray-100 py-20 px-6">
-        <h3 class="text-3xl font-semibold text-center text-teal-700 mb-8">Tipos de Ecosistemas</h3>
+        <h3 class="text-3xl font-semibold text-center text-teal-700 mb-8" data-aos="fade-up">Tipos de Ecosistemas</h3>
         <div id="ecosistemaGrid" class="grid md:grid-cols-3 gap-8">
           <!-- Ecosistemas visibles -->
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up">
             <img src="img/selva.jpg" alt="Selva" class="w-full h-40 object-cover">
             <div class="p-6">
               <h4 class="text-xl font-semibold mb-2">Selva</h4>
               <p class="text-gray-600">Alta biodiversidad, clima húmedo y lluvias frecuentes.</p>
             </div>
           </div>
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
             <img src="img/desierto.jpg" alt="Desierto" class="w-full h-40 object-cover">
             <div class="p-6">
               <h4 class="text-xl font-semibold mb-2">Desierto</h4>
               <p class="text-gray-600">Clima árido, poca agua y especies adaptadas a la sequía.</p>
             </div>
           </div>
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
             <img src="img/oceano.jpg" alt="Océano" class="w-full h-40 object-cover">
             <div class="p-6">
               <h4 class="text-xl font-semibold mb-2">Océano</h4>
@@ -106,21 +107,21 @@
           </div>
 
           <!-- Ecosistemas ocultos -->
-          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
             <img src="img/pradera.jpg" alt="Pradera" class="w-full h-40 object-cover">
             <div class="p-6">
               <h4 class="text-xl font-semibold mb-2">Pradera</h4>
               <p class="text-gray-600">Grandes extensiones de pastizales, clima templado y fauna adaptada.</p>
             </div>
           </div>
-          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
             <img src="img/bosque.jpg" alt="Bosque" class="w-full h-40 object-cover">
             <div class="p-6">
               <h4 class="text-xl font-semibold mb-2">Bosque</h4>
               <p class="text-gray-600">Climas variados, árboles densos y gran diversidad de especies.</p>
             </div>
           </div>
-          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="500">
             <img src="img/montana.jpg" alt="Montaña" class="w-full h-40 object-cover">
             <div class="p-6">
               <h4 class="text-xl font-semibold mb-2">Montaña</h4>
@@ -136,15 +137,13 @@
         </div>
 
         <script>
-          (function() {
-            const verMasEcosBtn = document.getElementById('verMasEcosBtn');
-            verMasEcosBtn.addEventListener('click', () => {
-              const extraEcos = document.querySelectorAll('#ecosistemaGrid > div:nth-child(n+4)');
-              extraEcos.forEach(ecos => ecos.classList.toggle('hidden'));
-              const anyHidden = Array.from(extraEcos).some(ecos => ecos.classList.contains('hidden'));
-              verMasEcosBtn.textContent = anyHidden ? "Ver más" : "Ver menos";
-            });
-          })();
+          const verMasEcosBtn = document.getElementById('verMasEcosBtn');
+          verMasEcosBtn.addEventListener('click', () => {
+            const extraEcos = document.querySelectorAll('#ecosistemaGrid > div:nth-child(n+4)');
+            extraEcos.forEach(ecos => ecos.classList.toggle('hidden'));
+            verMasEcosBtn.textContent = Array.from(extraEcos).some(ecos => ecos.classList.contains('hidden')) ? "Ver más" : "Ver menos";
+            AOS.refresh(); // Refresca AOS para animar los elementos recién mostrados
+          });
         </script>
       </section>
     </section>
@@ -152,11 +151,10 @@
     <!-- Animales -->
     <section id="animales" class="bg-gray-100 py-20 px-6">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold text-center text-teal-700 mb-12">🐾 Animales</h2>
-        <!-- Grid de animales -->
+        <h2 class="text-4xl font-bold text-center text-teal-700 mb-12" data-aos="fade-up">🐾 Animales</h2>
         <div id="animalGrid" class="grid md:grid-cols-3 gap-8">
           <!-- Animales visibles -->
-          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up">
             <img src="img/caballo.gif" alt="Tigre" class="w-full h-48 object-cover">
             <div class="p-6">
               <h3 class="text-2xl font-semibold mb-2">Tigre de Bengala</h3>
@@ -164,7 +162,7 @@
               <p class="text-gray-600">🍖 Carnívoro</p>
             </div>
           </div>
-          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
             <img src="img/delfin.jpg" alt="Delfín" class="w-full h-48 object-cover">
             <div class="p-6">
               <h3 class="text-2xl font-semibold mb-2">Delfín</h3>
@@ -172,7 +170,7 @@
               <p class="text-gray-600">🐟 Se alimenta de peces pequeños</p>
             </div>
           </div>
-          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
             <img src="img/elefante.jpg" alt="Elefante" class="w-full h-48 object-cover">
             <div class="p-6">
               <h3 class="text-2xl font-semibold mb-2">Elefante Africano</h3>
@@ -182,7 +180,7 @@
           </div>
 
           <!-- Animales ocultos -->
-          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
             <img src="img/lobo.jpg" alt="Lobo" class="w-full h-48 object-cover">
             <div class="p-6">
               <h3 class="text-2xl font-semibold mb-2">Lobo Gris</h3>
@@ -190,7 +188,7 @@
               <p class="text-gray-600">🍖 Carnívoro</p>
             </div>
           </div>
-          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
             <img src="img/oso.jpg" alt="Oso" class="w-full h-48 object-cover">
             <div class="p-6">
               <h3 class="text-2xl font-semibold mb-2">Oso Pardo</h3>
@@ -211,8 +209,8 @@
           verMasBtn.addEventListener('click', () => {
             const extraAnimals = document.querySelectorAll('#animalGrid .animal-card:nth-child(n+4)');
             extraAnimals.forEach(animal => animal.classList.toggle('hidden'));
-            const anyHidden = Array.from(extraAnimals).some(animal => animal.classList.contains('hidden'));
-            verMasBtn.textContent = anyHidden ? "Ver más" : "Ver menos";
+            verMasBtn.textContent = Array.from(extraAnimals).some(animal => animal.classList.contains('hidden')) ? "Ver más" : "Ver menos";
+            AOS.refresh();
           });
         </script>
       </div>
@@ -220,7 +218,7 @@
 
     <!-- Explicación -->
     <section id="explicacion" class="py-20 bg-gray-100 text-center">
-      <div class="max-w-4xl mx-auto px-4">
+      <div class="max-w-4xl mx-auto px-4" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-teal-600 mb-6">Explicación del Proyecto</h2>
         <p class="text-lg mb-8 text-gray-700">
           En este video te explicamos cómo funciona nuestro proyecto.
@@ -245,6 +243,15 @@
   <footer class="bg-[#0c1c34] text-white text-center py-6 w-full">
     <p>© 2025 EVOS</p>
   </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 
 </body>
 </html>
