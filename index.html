@@ -91,34 +91,84 @@
     </div>
 
     <!-- Tipos de Ecosistemas -->
-    <h3 class="text-3xl font-semibold text-center text-teal-700 mb-8">Tipos de Ecosistemas</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-        <img src="img/selva.jpg" alt="Selva" class="w-full h-40 object-cover">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Selva</h4>
-          <p class="text-gray-600">Alta biodiversidad, clima húmedo y lluvias frecuentes.</p>
-        </div>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-        <img src="img/desierto.jpg" alt="Desierto" class="w-full h-40 object-cover">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Desierto</h4>
-          <p class="text-gray-600">Clima árido, poca agua y especies adaptadas a la sequía.</p>
-        </div>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-        <img src="img/oceano.jpg" alt="Océano" class="w-full h-40 object-cover">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Océano</h4>
-          <p class="text-gray-600">Cubre el 70% de la Tierra y alberga millones de especies marinas.</p>
-        </div>
+<section id="ecosistemas" class="bg-gray-100 py-20 px-6">
+  <h3 class="text-3xl font-semibold text-center text-teal-700 mb-8">Tipos de Ecosistemas</h3>
+  
+  <div id="ecosistemaGrid" class="grid md:grid-cols-3 gap-8">
+    <!-- Ecosistemas visibles por defecto -->
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <img src="img/selva.jpg" alt="Selva" class="w-full h-40 object-cover">
+      <div class="p-6">
+        <h4 class="text-xl font-semibold mb-2">Selva</h4>
+        <p class="text-gray-600">Alta biodiversidad, clima húmedo y lluvias frecuentes.</p>
       </div>
     </div>
-  </section>
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <img src="img/desierto.jpg" alt="Desierto" class="w-full h-40 object-cover">
+      <div class="p-6">
+        <h4 class="text-xl font-semibold mb-2">Desierto</h4>
+        <p class="text-gray-600">Clima árido, poca agua y especies adaptadas a la sequía.</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <img src="img/oceano.jpg" alt="Océano" class="w-full h-40 object-cover">
+      <div class="p-6">
+        <h4 class="text-xl font-semibold mb-2">Océano</h4>
+        <p class="text-gray-600">Cubre el 70% de la Tierra y alberga millones de especies marinas.</p>
+      </div>
+    </div>
+
+    <!-- Ecosistemas adicionales (ocultos por defecto) -->
+    <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+      <img src="img/pradera.jpg" alt="Pradera" class="w-full h-40 object-cover">
+      <div class="p-6">
+        <h4 class="text-xl font-semibold mb-2">Pradera</h4>
+        <p class="text-gray-600">Grandes extensiones de pastizales, clima templado y fauna adaptada.</p>
+      </div>
+    </div>
+    <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+      <img src="img/bosque.jpg" alt="Bosque" class="w-full h-40 object-cover">
+      <div class="p-6">
+        <h4 class="text-xl font-semibold mb-2">Bosque</h4>
+        <p class="text-gray-600">Climas variados, árboles densos y gran diversidad de especies.</p>
+      </div>
+    </div>
+    <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+      <img src="img/montana.jpg" alt="Montaña" class="w-full h-40 object-cover">
+      <div class="p-6">
+        <h4 class="text-xl font-semibold mb-2">Montaña</h4>
+        <p class="text-gray-600">Zonas elevadas con climas fríos y fauna especializada.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón Ver más -->
+  <div class="text-center mt-8">
+    <button id="verMasEcosBtn" class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">
+      Ver más
+    </button>
+  </div>
+
+  <!-- Script para toggle Ver más / Ver menos -->
+  <script>
+    (function() {
+      const verMasEcosBtn = document.getElementById('verMasEcosBtn');
+
+      verMasEcosBtn.addEventListener('click', () => {
+        // Selecciona los ecosistemas adicionales (del 4º en adelante)
+        const extraEcos = document.querySelectorAll('#ecosistemaGrid > div:nth-child(n+4)');
+
+        extraEcos.forEach(ecos => ecos.classList.toggle('hidden'));
+
+        const anyHidden = Array.from(extraEcos).some(ecos => ecos.classList.contains('hidden'));
+        verMasEcosBtn.textContent = anyHidden ? "Ver más" : "Ver menos";
+      });
+    })();
+  </script>
+</section>
 
   <!-- Animales -->
-  <section id="animales" class="bg-gray-100 py-20 px-6">
+<section id="animales" class="bg-gray-100 py-20 px-6">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-4xl font-bold text-center text-teal-700 mb-12">🐾 Animales</h2>
     
@@ -178,13 +228,19 @@
     </div>
   </div>
 
-  <!-- Script para mostrar más animales -->
   <script>
-    const verMasBtn = document.getElementById('verMasBtn');
+    let verMasBtn = document.getElementById('verMasBtn');
+
     verMasBtn.addEventListener('click', () => {
-      const hiddenAnimals = document.querySelectorAll('#animalGrid .hidden');
-      hiddenAnimals.forEach(a => a.classList.remove('hidden'));
-      verMasBtn.style.display = 'none'; // Oculta el botón después de mostrar todos
+      // Selecciona todos los animales adicionales (del 4º en adelante)
+      const extraAnimals = document.querySelectorAll('#animalGrid .animal-card:nth-child(n+4)');
+
+      // Alterna la clase hidden
+      extraAnimals.forEach(animal => animal.classList.toggle('hidden'));
+
+      // Si alguno sigue oculto, el botón dice "Ver más", si no, "Ver menos"
+      const anyHidden = Array.from(extraAnimals).some(animal => animal.classList.contains('hidden'));
+      verMasBtn.textContent = anyHidden ? "Ver más" : "Ver menos";
     });
   </script>
 </section>
