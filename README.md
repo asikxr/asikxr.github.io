@@ -1,4 +1,4 @@
-# 🌱 Página de Ecosistemas
+# 🌱 Página de EVOS
 
 Proyecto web educativo sobre los **tipos de ecosistemas y animales**, con diseño moderno, responsivo y animaciones al hacer scroll.
 
