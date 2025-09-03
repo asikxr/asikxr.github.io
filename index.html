@@ -8,7 +8,7 @@
     <style>
   body {
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth; /* 🔥 hace el scroll animado */
+    scroll-behavior: smooth;
   }
 </style>
   <!-- AOS CSS -->
@@ -17,6 +17,29 @@
     body { font-family: 'Poppins', sans-serif; }
   </style>
 </head>
+<!-- Botón Ir arriba -->
+<button id="btnArriba" 
+  class="hidden fixed bottom-6 right-6 bg-teal-600 text-white p-3 rounded-full shadow-lg hover:bg-teal-700 transition transform hover:scale-110 z-50">
+  ⬆
+</button>
+
+<script>
+  const btnArriba = document.getElementById("btnArriba");
+
+  // Mostrar/ocultar botón al hacer scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btnArriba.classList.remove("hidden");
+    } else {
+      btnArriba.classList.add("hidden");
+    }
+  });
+
+  // Volver arriba con animación
+  btnArriba.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
 <body class="flex flex-col min-h-screen bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
