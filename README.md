@@ -29,7 +29,5 @@ Proyecto web educativo sobre los **tipos de ecosistemas y animales**, con diseñ
 
 ---
 
-## ⚡ Instalación y uso
-1. Clona o descarga este repositorio.  
-2. Abre el archivo **index.html** en tu navegador.  
-3. Explora las secciones y prueba las animaciones al hacer scroll.  
+## ⚡Website
+asikxr.github.io
