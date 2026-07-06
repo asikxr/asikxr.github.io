@@ -1,385 +1,241 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>EVOS: Ecosistemas Vida Organizacion y Sustentabilidad</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-  }
-</style>
-  <!-- AOS CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackGrid - Agencia de Diseño Web Profesional</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<!-- Botón Ir arriba -->
-<button id="btnArriba" 
-  class="hidden fixed bottom-6 right-6 bg-teal-600 text-white p-3 rounded-full shadow-lg hover:bg-teal-700 transition transform hover:scale-110 z-50">
-  ⬆
-</button>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img id="logo" class="logo" src="Resources/LogoWhitemode.png" alt="BlackGrid logo">
+                    <span class="logo-text">BlackGrid</span>
+                </div>
+                
+                <!-- Navegación Principal -->
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link active">Página Principal</a>
+                    <a href="gallery.html" class="nav-link">Galería Web</a>
+                </nav>
+                
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </header>
 
-<script>
-  const btnArriba = document.getElementById("btnArriba");
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Páginas Web que
+                    <span class="highlight">Generan Resultados</span>
+                </h1>
+                <p class="hero-subtitle">Diseño moderno, rendimiento excepcional y experiencia de usuario inmejorable</p>
+                <a href="gallery.html" class="cta-button cta-hero">Conoce Nuestro Trabajo</a>
+            </div>
+        </section>
 
-  // Mostrar/ocultar botón al hacer scroll
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      btnArriba.classList.remove("hidden");
-    } else {
-      btnArriba.classList.add("hidden");
-    }
-  });
+        <!-- About Section -->
+        <section class="about">
+            <div class="about-container">
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3 class="about-subtitle">De un Proyecto a una Agencia Digital Completa</h3>
+                        <p>BlackGrid nació como un ambicioso proyecto en el CBTis 168 de Aguascalientes, donde un estudiante apasionado por el diseño web decidieron crear algo extraordinario. Lo que comenzó como una idea en los pasillos de la escuela se transformó en una agencia profesional de diseño web y desarrollo digital.</p>
+                        
+                        <p>Hoy, años después, hemos evolucionado manteniendo los valores fundamentales que nos caracterizaban desde el inicio: innovación, dedicación y excelencia. Nuestro equipo está compuesto por semi-profesionales con experiencia en la industria, pero nunca olvidamos nuestras raíces ni el espíritu emprendedor que movió a comenzar.</p>
+                        
+                        <p>Cada proyecto que asumimos lo tratamos con el mismo entusiasmo y cuidado que aquel primer proyecto en el CBTis. Creemos que la tecnología y el diseño deben servir para transformar negocios y crear experiencias memorables. Nuestro objetivo es ser más que una agencia: somos tu socio en la transformación digital.</p>
+                        
+                        <div class="about-stats">
+                            <div class="stat">
+                                <h4 class="stat-number">3</h4>
+                                <p class="stat-label">Proyectos Iniciales</p>
+                            </div>
+                            <div class="stat">
+                                <h4 class="stat-number">100%</h4>
+                                <p class="stat-label">Clientes Satisfechos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  // Volver arriba con animación
-  btnArriba.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-<body class="flex flex-col min-h-screen bg-gray-50 text-gray-800">
+        <!-- Carousel Section -->
+        <section class="carousel-section">
+            <h2 class="section-title">Nuestras Soluciones</h2>
+            
+            <div class="carousel-container">
+                <button class="carousel-arrow prev" id="prevBtn" aria-label="Anterior">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
 
-  <!-- Navbar -->
-  <nav class="text-white" style="background-color: #0c1c34;">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#inicio">
-        <img src="img/logo.png" alt="logo" class="h-12">
-      </a>
-      <div class="space-x-6 hidden md:flex">
-        <a href="#inicio" class="hover:text-teal-600 font-medium">Inicio</a>
-        <a href="#ecosistemas" class="hover:text-teal-600 font-medium">Ecosistemas</a>
-        <a href="#animales" class="hover:text-teal-600 font-medium">Animales</a>
-      </div>
+                <div class="carousel-wrapper">
+                    <div class="carousel" id="carousel">
+                        <div class="carousel-slide" style="background-image: url('Resources/Ad0.png')"></div>
+                        <div class="carousel-slide" style="background-image: url('Resources/Ad1.png')"></div>
+                        <div class="carousel-slide" style="background-image: url('Resources/Ad2.png')"></div>
+                        <div class="carousel-slide" style="background-image: url('Resources/Ad3.png')"></div>
+                        <div class="carousel-slide" style="background-image: url('Resources/Ad4.png')"></div>
+                    </div>
+                </div>
+
+                <button class="carousel-arrow next" id="nextBtn" aria-label="Siguiente">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators" id="indicators">
+                <button class="indicator active" data-slide="0" aria-label="Ir a slide 1"></button>
+                <button class="indicator" data-slide="1" aria-label="Ir a slide 2"></button>
+                <button class="indicator" data-slide="2" aria-label="Ir a slide 3"></button>
+                <button class="indicator" data-slide="3" aria-label="Ir a slide 4"></button>
+                <button class="indicator" data-slide="4" aria-label="Ir a slide 5"></button>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2 class="section-title">¿Por qué elegirnos?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-description="Implementamos protocolos de seguridad de nivel empresarial con encriptación end-to-end. Nuestros servidores están certificados al ser hosteados con herramientas de seguridad de Microsoft. Protegemos tus datos y los de tus usuarios con los estándares más rigurosos.">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" fill="none" stroke-width="1.5">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path>
+                        </svg>
+                    </div>
+                    <h3>Seguridad</h3>
+                    <p>Protección de datos y encriptación de nivel empresarial</p>
+                </div>
+
+                <div class="feature-card" data-description="Nuestros sitios web cargan en menos de 2 segundos. Utilizamos técnicas avanzadas de optimización, compresión de imágenes, caché inteligente y CDN global. Cada milisegundo importa para convertir visitantes en clientes valiosos.">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" fill="none" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m3.08 3.08l4.24 4.24M1 12h6m6 0h6m-17.78 7.78l4.24-4.24m3.08-3.08l4.24-4.24"></path>
+                        </svg>
+                    </div>
+                    <h3>Velocidad</h3>
+                    <p>Optimización extrema para carga rápida en todos los dispositivos</p>
+                </div>
+
+                <div class="feature-card" data-description="Todos nuestros diseños se adaptan perfectamente a cualquier pantalla. Probamos en más de 10 dispositivos diferentes para garantizar la mejor experiencia. Tu sitio se verá increíble en móviles, tablets y desktops.">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" fill="none" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                            <path d="M16 4H8a2 2 0 0 0-2 2v2h12V6a2 2 0 0 0-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Responsive</h3>
+                    <p>Perfecta adaptación en móvil, tablet y escritorio</p>
+                </div>
+
+                <div class="feature-card" data-description="Optimizamos cada aspecto técnico para buscadores. Desde estructura JSON-LD hasta velocidad de carga, sitemap dinámico y backlinks de calidad. Tus clientes te encontrarán en Google desde el primer mes.">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" fill="none" stroke-width="1.5">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>SEO Optimizado</h3>
+                    <p>Posicionamiento en buscadores desde el primer día</p>
+                </div>
+
+                <div class="feature-card" data-description="Nuestro equipo tiene años combinados en diseño y desarrollo web. Hemos creado proyectos exitosos de todos los tamaños a nivel nacional. Tu éxito es nuestra prioridad.">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" fill="none" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Equipo Experto</h3>
+                    <p>Profesionales certificados con años de experiencia en la industria</p>
+                </div>
+
+                <div class="feature-card" data-description="Te asesoramos en cada paso del camino. Desde la estrategia inicial hasta el lanzamiento con recomendaciones y soporte continuo. Disponibles 24/7 (pero dormimos), para responder tus preguntas y optimizar tu presencia digital.">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" fill="none" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Asesoramiento continuo y resolución rápida de cualquier inconveniente</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Expandible -->
+        <div class="feature-modal" id="featureModal">
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="modal-header">
+                    <div class="modal-icon" id="modalIcon"></div>
+                    <h2 id="modalTitle"></h2>
+                </div>
+                <p id="modalDescription"></p>
+                <div class="modal-footer">
+                    <button class="cta-button" id="contactBtn">Más información</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Listo para transformar tu negocio digital</h2>
+                <p>Contacta con nosotros hoy y obtén una consulta gratuita</p>
+                <button class="cta-button large" id="whatsappCTA">Comenzar Ahora</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BlackGrid</h4>
+                    <p>Agencia especializada en diseño web y desarrollo profesional</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/blackgridweb" target="_blank" aria-label="Instagram">📷 @blackgridweb</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BlackGrid. Todos los derechos reservados.</p>
+            </div>
+        </footer>
     </div>
-  </nav>
 
-  <!-- Main Content -->
-  <main class="flex-grow">
-
-    <!-- Hero Section -->
-    <section id="inicio" class="text-white min-h-screen flex items-center justify-center text-center px-6 relative"
-             style="background: url('img/fondo_inicio.png') no-repeat center center; background-size: cover;">
-      <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-      <div class="relative z-10 flex flex-col items-center gap-4" data-aos="fade-up">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6">EVOS</h1>
-        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-          Una nueva forma divertida de entender a los ecosistemas, qué factores los afectan y la increíble diversidad de animales que los habitan.
-        </p>
-        <a href="#ecosistemas" class="bg-white text-teal-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">Explorar</a>
-        <a href="archivos/mi_archivo.pdf" download class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">Contactanos! 13/10/25</a>
-      </div>
-    </section>
-
-    <!-- Ecosistemas -->
-    <section id="ecosistemas" class="max-w-6xl mx-auto py-20 px-6">
-      <h2 class="text-4xl font-bold text-center text-teal-700 mb-12" data-aos="fade-up">🌍 Ecosistemas</h2>
-      
-      <!-- Introducción -->
-      <div class="bg-white rounded-2xl shadow-lg p-8 mb-12" data-aos="fade-up">
-        <h3 class="text-2xl font-semibold mb-4">¿Qué es un ecosistema?</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Un ecosistema es una comunidad de organismos que interactúan entre sí y con el entorno físico 
-          que los rodea (suelo, agua, aire, clima). Estos sistemas mantienen el equilibrio natural del planeta 
-          y permiten la vida.
-        </p>
-      </div>
-
-      <!-- Funcionamiento y factores -->
-      <div class="grid md:grid-cols-2 gap-8 mb-12">
-        <div class="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-right">
-          <h3 class="text-2xl font-semibold mb-4">¿Cómo funcionan?</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Los ecosistemas funcionan mediante cadenas alimenticias y ciclos biogeoquímicos 
-            (agua, carbono, nitrógeno). La energía fluye desde el sol hacia las plantas y de ahí 
-            a los animales, manteniendo un equilibrio dinámico.
-          </p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-left">
-          <h3 class="text-2xl font-semibold mb-4">Factores que los afectan</h3>
-          <ul class="list-disc list-inside text-gray-600 leading-relaxed">
-            <li>🌡️ Cambio climático</li>
-            <li>🌳 Deforestación</li>
-            <li>💧 Contaminación del agua y aire</li>
-            <li>🏗️ Urbanización y actividad humana</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Tipos de Ecosistemas -->
-      <section class="bg-gray-100 py-20 px-6">
-        <h3 class="text-3xl font-semibold text-center text-teal-700 mb-8" data-aos="fade-up">Tipos de Ecosistemas</h3>
-            <h6 class="text-3xl font-semibold text-center text-teal-700 mb-8" data-aos="fade-up">By:FreePik.es</h6>
-        <div id="ecosistemaGrid" class="grid md:grid-cols-3 gap-8">
-          <!-- Ecosistemas visibles -->
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up">
-            <img src="img/SELVA.jpg" alt="Selva" class="w-full h-40 object-cover">
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-2">Selva</h4>
-              <p class="text-gray-600">Alta biodiversidad, clima húmedo y lluvias frecuentes.</p>
-            </div>
-          </div>
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-            <img src="img/DESIERTO.jpg" alt="Desierto" class="w-full h-40 object-cover">
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-2">Desierto</h4>
-              <p class="text-gray-600">Clima árido, poca agua y especies adaptadas a la sequía.</p>
-            </div>
-          </div>
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/OCEANO.jpg" alt="Océano" class="w-full h-40 object-cover">
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-2">Océano</h4>
-              <p class="text-gray-600">Cubre elerra y alberga millones de especies marinas.</p>
-            </div>
-          </div>
-
-          <!-- Ecosistemas ocultos -->
-          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/PRADERA.jpg" alt="Pradera" class="w-full h-40 object-cover">
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-2">Pradera</h4>
-              <p class="text-gray-600">Grandes extensiones de pastizales, clima templado y fauna adaptada.</p>
-            </div>
-          </div>
-          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/BOSQUE.jpg" alt="Bosque" class="w-full h-40 object-cover">
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-2">Bosque</h4>
-              <p class="text-gray-600">Climas variados, árboles densos y gran diversidad de especies.</p>
-            </div>
-          </div>
-          <div class="hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="500">
-            <img src="img/MONTAÑA.jpg" alt="Montaña" class="w-full h-40 object-cover">
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-2">Montaña</h4>
-              <p class="text-gray-600">Zonas elevadas con climas fríos y fauna especializada.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-8">
-          <button id="verMasEcosBtn" class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">
-            Ver más
-          </button>
-        </div>
-
-        <script>
-          const verMasEcosBtn = document.getElementById('verMasEcosBtn');
-          verMasEcosBtn.addEventListener('click', () => {
-            const extraEcos = document.querySelectorAll('#ecosistemaGrid > div:nth-child(n+4)');
-            extraEcos.forEach(ecos => ecos.classList.toggle('hidden'));
-            verMasEcosBtn.textContent = Array.from(extraEcos).some(ecos => ecos.classList.contains('hidden')) ? "Ver más" : "Ver menos";
-            AOS.refresh(); // Refresca AOS para animar los elementos recién mostrados
-          });
-        </script>
-      </section>
-    </section>
-
-    <!-- Animales -->
-    <section id="animales" class="bg-gray-100 py-20 px-6">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold text-center text-teal-700 mb-12" data-aos="fade-up">🐾 Animales</h2>
-            <h6 class="text-4xl font-bold text-center text-teal-700 mb-12" data-aos="fade-up">By: Giphy.com</h6>
-        <div id="animalGrid" class="grid md:grid-cols-3 gap-8">
-          <!-- Animales visibles -->
-          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up">
-            <img src="img/tigre.gif" alt="Jaguar" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Jaguar</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Selvas tropicales de América Central y del Sur</p>
-              <p class="text-gray-600">🥩 Dieta: Carnívoro – caza venados, pecaríes y reptiles</p>
-              <p class="text-gray-600">💡 Dato curioso: Tiene la mordida más poderosa entre los felinos</p>
-            </div>
-          </div>
-          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-            <img src="img/puma.gif" alt="Puma" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Puma</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Montañas, selvas y praderas de América</p>
-              <p class="text-gray-600">🥩 Dieta: Carnívoro – caza venados, roedores y aves</p>
-               <p class="text-gray-600">💡 Dato curioso: Puede saltar hasta 5 metros y correr a 60 km/h</p>
-
-            </div>
-          </div>
-          <div class="animal-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/ardilla.gif" alt="Ardilla" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Ardilla</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Bosques, parques y zonas arboladas</p>
-              <p class="text-gray-600">🌱 Dieta: Omnívora – consume nueces, semillas, frutas e insectos</p>
-              <p class="text-gray-600">💡 Dato curioso: Puede girar sus tobillos 180° para bajar de cabeza por los árboles</p>
-
-            </div>
-          </div>
-
-          <!-- Animales ocultos -->
-          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/aguila.gif" alt="aguila" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Águila</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Montañas, bosques y zonas abiertas</p>
-              <p class="text-gray-600">🍖 Dieta: Carnívora – caza roedores, reptiles y aves</p>
-                     <p class="text-gray-600">💡 Dato curioso: Tiene una vista 4 veces más aguda que la humana</p>
-            </div>
-          </div>
-          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/Coyote.jpg" alt="Oso" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Coyote</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Desiertos, praderas y bosques de América</p>
-              <p class="text-gray-600">🪳 Dieta: Omnívoro – come frutas, insectos y pequeños mamíferos</p>
-               <p class="text-gray-600">💡 Dato curioso: Se adapta fácilmente a entornos urbanos</p>
-            </div>
-          </div>
-                    <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/oso.gif" alt="Oso Negro" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Oso negro</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Bosques templados y montañas de América del Norte</p>
-              <p class="text-gray-600">🐟 Dieta: Omnívoro – consume frutas, insectos, peces y carroña</p>
-                     <p class="text-gray-600">💡 Dato curioso: Puede trepar árboles y nadar con gran habilidad</p>
-            </div>
-          </div>
-           <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/vaca.gif" alt="Vaca" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Vaca</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Praderas y zonas rurales</p>
-              <p class="text-gray-600">🌿 Dieta: Herbívora – pasto, heno y granos</p>
-                     <p class="text-gray-600">💡 Dato curioso: Tiene un sistema digestivo con 4 compartimentos</p>
-            </div>
-          </div>
-          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/caballo.gif" alt="Caballo" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Caballo</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Praderas, bosques y zonas agrícolas</p>
-              <p class="text-gray-600">🌿 Dieta: Herbívoro – pasto, heno y alfalfas</p>
-                     <p class="text-gray-600">💡 Dato curioso: Puede dormir de pie gracias a sus patas bloqueables</p>
-            </div>
-          </div>
-          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/cerdo.gif" alt="Cerdo" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Cerdo</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Granjas, bosques y zonas rurales</p>
-              <p class="text-gray-600">🥕 Dieta: Omnívoro – raíces, frutas, insectos y restos orgánicos</p>
-                     <p class="text-gray-600">💡 Dato curioso: Tiene una inteligencia comparable a la de un perro</p>
-            </div>
-          </div>
-            <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/oveja.gif" alt="Oveja" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Oveja</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Praderas, montañas y zonas templadas</p>
-              <p class="text-gray-600">🫛 Dieta: Herbívora – pasto, leguminosas y arbustos</p>
-                     <p class="text-gray-600">💡 Dato curioso: Su lana es uno de los materiales más usados en la industria textil</p>
-            </div>
-          </div>
-            <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/cabra.gif" alt="Cabra" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Cabra</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Zonas montañosas y rurales</p>
-              <p class="text-gray-600">🌳 Dieta: Herbívora – arbustos, pasto y cereales</p>
-                     <p class="text-gray-600">💡 Dato curioso: Tiene excelente equilibrio y puede escalar pendientes rocosas</p>
-            </div>
-          </div>
-          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/SerpienteC.gif" alt="Serpiente de Cascabel" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Serpiente de Cascabel</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Desiertos, bosques y praderas de América</p>
-              <p class="text-gray-600">🥩 Dieta: Carnívora – caza roedores, aves y reptiles</p>
-                     <p class="text-gray-600">💡 Dato curioso: Usa su cascabel como advertencia sonora antes de atacar</p>
-            </div>
-          </div>
-          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/Ciervo.gif" alt="Ciervo de Cola Blanca" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Ciervo de Cola Blanca</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Bosques templados y tropicales de América</p>
-              <p class="text-gray-600">🍓 Dieta: Herbívoro – hojas, frutos y semillas</p>
-                     <p class="text-gray-600">💡 Dato curioso: Levanta su cola blanca como señal de alarma</p>
-            </div>
-          </div>
-            <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/cocodrilo.gif" alt="Caiman" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Caiman de Anteojos</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Ríos, pantanos y lagos de América Central y del Sur</p>
-              <p class="text-gray-600">>🐠 Dieta: Carnívoro – peces, aves, mamíferos y crustáceos</p>
-                     <p class="text-gray-600">💡 Dato curioso: Su “anteojera” ósea entre los ojos le da su nombre</p>
-            </div>
-          </div>
-          <div class="animal-card hidden bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-            <img src="img/zorillo.gif" alt="Zorillo" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Zorrillo</h3>
-              <p class="text-gray-600 mb-2">🌍 Hábitat: Praderas, bosques y zonas suburbanas</p>
-              <p class="text-gray-600">🐠 Dieta: Omnívoro – insectos, frutas, huevos y pequeños animales</p>
-                     <p class="text-gray-600">💡 Dato curioso: Puede lanzar su olor a más de 6 metros como defensa</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-8">
-          <button id="verMasBtn" class="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">
-            Ver más
-          </button>
-        </div>
-
-        <script>
-          const verMasBtn = document.getElementById('verMasBtn');
-          verMasBtn.addEventListener('click', () => {
-            const extraAnimals = document.querySelectorAll('#animalGrid .animal-card:nth-child(n+4)');
-            extraAnimals.forEach(animal => animal.classList.toggle('hidden'));
-            verMasBtn.textContent = Array.from(extraAnimals).some(animal => animal.classList.contains('hidden')) ? "Ver más" : "Ver menos";
-            AOS.refresh();
-          });
-        </script>
-      </div>
-    </section>
-
-    <!-- Explicación -->
-    <section id="explicacion" class="py-20 bg-gray-100 text-center">
-      <div class="max-w-4xl mx-auto px-4" data-aos="fade-up">
-        <h2 class="text-4xl font-bold text-teal-600 mb-6">Explicación del Proyecto</h2>
-        <p class="text-lg mb-8 text-gray-700">
-          En este video te explicamos cómo funciona nuestro proyecto.
-        </p>
-        <div class="relative w-full overflow-hidden rounded-2xl shadow-lg" style="padding-top: 56.25%;">
-          <iframe 
-            class="absolute top-0 left-0 w-full h-full rounded-2xl"
-            src="https://www.youtube.com/embed/HDc7R9LlcjQ?si=vVUPigrP0K8mTOvE" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-[#0c1c34] text-white text-center py-6 w-full">
-    <p>© 2025 EVOS</p>
-  </footer>
-
-  <!-- AOS JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-  </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Web - BlackGrid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img id="logo" class="logo" src="Resources/LogoWhitemode.png" alt="BlackGrid logo">
+                    <span class="logo-text">BlackGrid</span>
+                </div>
+                
+                <!-- Navegación Principal -->
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link">Página Principal</a>
+                    <a href="gallery.html" class="nav-link active">Galería Web</a>
+                </nav>
+                
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Galería Hero -->
+        <section class="gallery-hero">
+            <div class="gallery-hero-content">
+                <h1 class="gallery-title">Galería Web</h1>
+                <p class="gallery-subtitle">Explora nuestros mejores proyectos y trabajos destacados</p>
+            </div>
+        </section>
+
+        <!-- Filtros de Categorías -->
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+                    <button class="filter-btn" data-filter="corporate">Corporativo</button>
+                    <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+                    <button class="filter-btn" data-filter="creative">Creativo</button>
+                </div>
+
+                <!-- Grid de Proyectos (Placeholder para ejemplos futuros) -->
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="ecommerce">
+                        <div class="gallery-item-placeholder">
+                            <h3>Tienda Online</h3>
+                            <p>E-Commerce - Próximamente</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="corporate">
+                        <div class="gallery-item-placeholder">
+                            <h3>Sitio Corporativo</h3>
+                            <p>Corporativo - Próximamente</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="portfolio">
+                        <div class="gallery-item-placeholder">
+                            <h3>Portfolio Creativo</h3>
+                            <p>Portfolio - Próximamente</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="creative">
+                        <div class="gallery-item-placeholder">
+                            <h3>Diseño Innovador</h3>
+                            <p>Creativo - Próximamente</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item gallery-item-preview" data-category="portfolio">
+                        <a href="https://asikxr.github.io/" target="_blank" rel="noopener noreferrer" class="gallery-item-link">
+                            <div class="gallery-item-placeholder">
+                                <h3>EVOS</h3>
+                                <p>Portfolio - Visitar sitio</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="ecommerce">
+                        <div class="gallery-item-placeholder">
+                            <h3>Plataforma de Venta</h3>
+                            <p>E-Commerce - Próximamente</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="corporate">
+                        <div class="gallery-item-placeholder">
+                            <h3>Empresa Tech</h3>
+                            <p>Corporativo - Próximamente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>¿Listo para tu próximo proyecto?</h2>
+                <p>Contacta con nosotros y hagamos algo extraordinario juntos</p>
+                <button class="cta-button large" id="whatsappCTA">Comenzar Ahora</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BlackGrid</h4>
+                    <p>Agencia especializada en diseño web y desarrollo profesional</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="gallery.html">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/blackgridweb" target="_blank" aria-label="Instagram">📷 @blackgridweb</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 BlackGrid. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+    
+    <script>
+        // Inicializar filtros de galería
+        (function() {
+            function initFilters() {
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                const galleryItems = document.querySelectorAll('.gallery-item');
+
+                if (filterBtns.length === 0 || galleryItems.length === 0) return;
+
+                filterBtns.forEach((btn) => {
+                    btn.addEventListener('click', function() {
+                        filterBtns.forEach((b) => b.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        const filter = this.getAttribute('data-filter');
+                        galleryItems.forEach((item) => {
+                            const category = item.getAttribute('data-category');
+                            if (filter === 'all' || category === filter) {
+                                item.classList.remove('hidden');
+                            } else {
+                                item.classList.add('hidden');
+                            }
+                        });
+                    });
+                });
+            }
+            
+            // Ejecutar cuando el DOM esté listo
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initFilters);
+            } else {
+                initFilters();
+            }
+        })();
+    </script>
+</body>
+</html>
